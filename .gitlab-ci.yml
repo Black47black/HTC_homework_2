@@ -1,0 +1,35 @@
+Тестирование:
+  script:
+    - npm install express portscanner puppeteer jest jest-junit
+    - npx jest --passWithNoTests --ci --reporters=default --reporters=jest-junit
+  artifacts:
+    when: always
+    reports:
+      junit: jest-report.xml
+
+Проверка стиля кода HTML:
+  script:
+    - npm install htmlhint
+    - npx htmlhint --format junit > htmlhint-report.xml
+  artifacts:
+    when: always
+    reports:
+      junit: htmlhint-report.xml
+
+Проверка стиля кода CSS:
+  script:
+    - npm install stylelint stylelint-config-primer stylelint-config-rational-order stylelint-junit-formatter stylelint-order
+    - npx stylelint "**/*.{html,css}" --allow-empty-input --custom-formatter 'node_modules/stylelint-junit-formatter' > stylelint-report.xml
+  artifacts:
+    when: always
+    reports:
+      junit: stylelint-report.xml
+
+Проверка стиля кода JavaScript:
+  script:
+    - npm install eslint eslint-config-airbnb-base eslint-plugin-html eslint-plugin-import
+    - npx eslint "**/*.{html,js}" --no-error-on-unmatched-pattern --format junit > eslint-report.xml
+  artifacts:
+    when: always
+    reports:
+      junit: eslint-report.xml

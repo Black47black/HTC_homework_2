@@ -1,0 +1,6 @@
+extends:
+  # https://github.com/primer/stylelint-config-primer
+  - stylelint-config-primer
+
+  # https://github.com/constverum/stylelint-config-rational-order
+  - stylelint-config-rational-order

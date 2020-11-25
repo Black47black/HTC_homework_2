@@ -1,0 +1,27 @@
+{
+  "name": "wiki-text",
+  "scripts": {
+    "test": "jest"
+  },
+  "jest-junit": {
+    "outputName": "jest-report.xml"
+  },
+  "devDependencies": {
+    "@primer/css": "^15.2.0",
+    "eslint": "^7.13.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-html": "^6.1.1",
+    "eslint-plugin-import": "^2.22.1",
+    "express": "^4.17.1",
+    "htmlhint": "^0.14.2",
+    "jest": "^26.6.3",
+    "jest-junit": "^12.0.0",
+    "portscanner": "^2.2.0",
+    "puppeteer": "^5.5.0",
+    "stylelint": "^13.8.0",
+    "stylelint-config-primer": "^9.3.3",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-junit-formatter": "^0.2.2",
+    "stylelint-order": "^4.1.0"
+  }
+}
